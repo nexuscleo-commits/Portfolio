@@ -42,11 +42,6 @@ h2 {
     margin-bottom: 14px;
 }
 
-.dot {
-    color: #890000;
-    font-size: 40px;
-}
-
 .container {
     width: 90%;
     max-width: var(--max-width);
