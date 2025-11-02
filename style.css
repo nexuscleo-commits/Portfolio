@@ -1,172 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;700&display=swap');
 
-/* CSS Custom Properties (Variáveis) */
 :root {
-    --cor-primaria: #1cadd5;
-    --cor-secundaria: #a6d0ac;
-    --cor-destaque: #16a978;
-    --cor-destaque-hover: #75e78a;
-    --cor-sombra-fraca: #0eabdb;
-    --cor-sombra-forte: #0ed8ac;
-    --cor-texto: #000000;
-
-    --fonte-principal: 'Roboto', sans-serif;
-    --fonte-titulo: 'Montserrat', sans-serif;
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #94a3b8;
+    --accent: #1cadd5;
+    --accent-2: #16a978;
+    --glass: rgba(255, 255, 255, 0.03);
+    --radius: 12px;
+    --max-width: 1100px;
+    --ff-body: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial;
+    --ff-heading: 'Montserrat', 'Segoe UI', sans-serif;
 }
 
-/* Reset e Estilos Globais */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html, body {
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
     height: 100%;
-    font-family: var(--fonte-principal);
 }
 
 body {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/18/18/37/programming-1836330_1280.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Mantém o fundo fixo durante o scroll */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    justify-content: center; /* Centraliza o container verticalmente */
+    font-family: var(--ff-body);
+    background: linear-gradient(180deg, rgba(12, 18, 28, 1) 0%, rgba(6, 11, 19, 1) 100%);
+    color: #e6eef6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
 }
 
-.container-geral {
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px; /* Adiciona um espaçamento lateral em telas menores */
+h2 {
+    font-family: var(--ff-heading);
+    margin-bottom: 14px;
 }
 
-.perfil-header {
-    margin-bottom: 20px;
+.dot {
+    color: #890000;
+    font-size: 40px;
 }
 
-.conteudo-principal {
-    width: 100%; /* Ocupa a largura do container-geral */
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
-.imagem-perfil {
-    border-radius: 50%;
-    border: 4px solid var(--cor-sombra-fraca);
-    box-shadow: 0 4px 8px var(--cor-sombra-forte);
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-.carousel-container {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 10px; /* Espaço para a barra de rolagem não colar nos cards */
-    scrollbar-color: var(--cor-primaria) var(--cor-secundaria);
-    scrollbar-width: thin;
-}
-
-/* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari) */
-.carousel-container::-webkit-scrollbar {
-    height: 8px;
-}
-.carousel-container::-webkit-scrollbar-track {
-    background: var(--cor-secundaria);
-}
-.carousel-container::-webkit-scrollbar-thumb {
-    background-color: var(--cor-primaria);
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
     border-radius: 10px;
-}
-
-.card {
-    flex: 0 0 100%;
-    scroll-snap-align: center;
-    width: 100%;
-    min-height: 320px; /* Altura mínima para consistência */
-    height: auto; /* Altura se ajusta ao conteúdo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border: 5px solid var(--cor-primaria);
-    border-radius: 10px;
-    background-color: var(--cor-secundaria);
-    box-shadow: 0 4px 8px var(--cor-sombra-fraca);
-}
-
-.card h2 {
-    font-family: var(--fonte-titulo);
+    text-decoration: none;
     font-weight: 700;
-    margin-bottom: 15px;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #021019;
+}
+
+.btn.outline {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+    background: transparent;
+}
+
+.card.project {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card.project img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card.project h3 {
+    margin-bottom: 6px;
+}
+
+.card.project p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent);
+    backdrop-filter: blur(6px);
+    z-index: 50;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.brand {
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+}
+
+.site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all .18s;
+}
+
+.site-nav a:hover {
+    color: #fff;
+    background: var(--glass);
+}
+
+/* Hero Section */
+section.hero {
+    padding: 60px 0;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: var(--ff-heading);
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
+}
+
+.hero-content p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-media {
     text-align: center;
 }
 
-.card ul, .card ol {
-    padding-left: 20px; /* Adiciona um recuo padrão para as listas */
-    align-self: flex-start; /* Alinha a lista à esquerda dentro do card */
-    width: 100%;
+.perfil {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-.botao {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 15px;
-    background-color: var(--cor-destaque);
-    color: var(--cor-texto);
-    border-radius: 10px;
-    font-family: var(--fonte-principal);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    border: none;
-    text-decoration: none; /* Remove sublinhado dos links */
-    font-weight: 700;
+/* Sobre, Projetos, Contato Sections */
+section.container {
+    padding: 54px 0;
 }
 
-.botao:hover {
-    background-color: var(--cor-destaque-hover);
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 6px 12px var(--cor-destaque);
+.sobre p {
+    color: var(--muted);
+    max-width: 780px;
 }
 
-.contatos {
+.skills {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+    margin-top: 12px;
 }
 
-/* Ícones para os botões de contato */
-.botao::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.skills li {
+    background: var(--glass);
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: var(--muted);
+    font-weight: 600;
 }
 
-.botao.linkedin::before {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+/* Projetos Section */
+.projetos .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-.botao.email::before {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/732/732200.png');
+/* Contato Section */
+.contact-form {
+    max-width: 680px;
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.botao.telefone::before {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/724/724664.png');
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+.form-row input,
+.form-row textarea {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 10px;
+    border-radius: 8px;
+    color: inherit;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-status {
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+.contact-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+/* Footer */
+.site-footer {
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--muted);
+}
+
+@media (max-width: 980px) {
+    .hero-inner {
+        grid-template-columns: 1fr 260px;
+    }
+
+    .projetos .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .site-nav.open {
+        display: block;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        margin-top: 8px;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projetos .grid {
+        grid-template-columns: 1fr;
+    }
 }

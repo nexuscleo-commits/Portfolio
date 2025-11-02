@@ -3,78 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Cleomar da Silva</title>
+    <meta name="description" content="Portfólio de Cleomar da Silva — Desenvolvedor Fullstack em formação no DevClub. Projetos, habilidades e contato.">
+    <meta name="theme-color" content="#1cadd5">
+    <title>Cleomar da Silva — Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-    <body>
-        <div class="container-geral">
-            <header class="perfil-header">
-                <img class="imagem-perfil" src="img/foto-perfil.jpg" alt="Foto de Cleomar da Silva">
-            </header>
-            
-            <main class="conteudo-principal">
-            <div class="carousel-container">
-                <!-- Card 1: Quem sou eu? -->
-            <!-- Card 1: Quem sou eu? -->
-            <div class="card">
-                <h2>Quem sou eu?</h2>
-                <p>Olá! Meu nome é Cleomar, tenho 36 anos e sou do Rio Grande do Sul. Sou aluno do DevClub, onde estou aprendendo sobre desenvolvimento web, focando em fullstack. Estou muito animado para continuar aprendendo e crescer na área de desenvolvimento web.</p>
-            </div>
-            <div class="card">
-                <h2>O que eu faço?</h2>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="#">Cleomar da Silva</a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">☰</button>
+            <nav class="site-nav" aria-label="Navegação principal">
                 <ul>
-                    <li>Atualmente, estou me dedicando ao curso do DevClub para aprimorar minhas habilidades em desenvolvimento web. Além disso, gosto de explorar novas tecnologias e trabalhar em projetos pessoais para aplicar o que aprendo.</li>
-                    <li>Tenho experiência em programação e treinamento de pessoas na área de usinagem com CNC.</li>
-                    <li>Experiência como líder de equipes.</li>
-                    <li>Habilidades com tecnologias como SolidWorks, FL Studio, Python, CSharp, Unity Engine.</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
-            </div>
-            <!-- Card 3: Metas -->
-            <div class="card">
-                <h2>Minhas metas para este ano</h2>
-                <ul>
-                    <li>Concluir o curso do DevClub com excelência.</li>
-                    <li>Desenvolver projetos práticos para aplicar o conhecimento adquirido.</li>
-                    <li>Participar de comunidades de desenvolvedores para networking e aprendizado contínuo.</li>
-                    <li>Buscar oportunidades de estágio ou trabalho na área de desenvolvimento web.</li>
-                    <li>Me tornar um profissional Fullstack de sucesso.</li>
-                    <li>Dar a tão sonhada liberdade finaceira para a minha família.</li>
-                </ul>
-            </div> 
-            <!-- Card 4: Pessoas no DevClub -->
-            <div class="card">
-                <h2>Pessoas que eu gostaria que estivessem no DevClub:</h2>
-                <ol>
-                    <li>1-_____</li>
-                    <li>2-_____</li>
-                    <li>3-_____</li>
-                    <li>4-_____</li>
-                    <li>5-_____</li>
-                </ol>
-            </div>
-            <!-- Card 5: Hobbies -->
-            <div class="card">
-                <h2>Hobbies e interesses</h2>
-                <ul>
-                    <li>Além do desenvolvimento web, tenho diversos hobbies e interesses que me ajudam a manter um equilíbrio saudável entre trabalho e vida pessoal. Gosto de tocar violão, o que me permite expressar minha criatividade e relaxar. Também sou apaixonado por música eletrônica, especialmente o gênero Trance, que me inspira e motiva.</li>
-                    <li>Outra paixão minha é a culinária. Adoro experimentar novas receitas e cozinhar para minha família e amigos. A cozinha é um espaço onde posso ser criativo e compartilhar momentos especiais com as pessoas que amo.</li>
-                    <li>Além disso, gosto de praticar atividades ao ar livre, como caminhadas e passeios de bicicleta. Essas atividades me ajudam a manter a mente clara e o corpo saudável.</li>
-                    <li>Em resumo, meus hobbies e interesses são uma parte importante da minha vida, proporcionando-me alegria, inspiração e equilíbrio.</li>
-                </ul>
-            </div>
-            <!-- Card 6: Contatos -->
-            <div class="card">
-                <h2>Meus contatos</h2>
-                <p>Você pode conferir meu perfil profissional no LinkedIn para saber mais sobre minha experiência, habilidades e conexões na área de desenvolvimento web.</p>
-                <div class="contatos">
-                    <a href="https://www.linkedin.com/in/cleomar-silva-173069246/" target="_blank" class="botao linkedin">LinkedIn</a>
-                    <a href="mailto:nexuscleo@gmail.com" class="botao email">E-mail</a>
-                    <a href="tel:+5554991887441" class="botao telefone">Telefone</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Olá, eu sou <span>Cleomar</span></h1>
+                    <p>Desenvolvedor web em formação — foco em Fullstack. Transformo ideias em projetos reais com HTML, CSS, JavaScript e ferramentas modernas.</p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="#projetos">Ver projetos</a>
+                        <a class="btn outline" href="mailto:nexuscleo@gmail.com">Contatar</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img class="perfil" src="img/foto-perfil.jpg" alt="Foto de Cleomar da Silva">
                 </div>
             </div>
+        </section>
+
+        <section id="sobre" class="sobre container">
+            <h2>Sobre mim</h2>
+            <p>Sou aluno do DevClub com experiência em liderança e treinamento técnico. Tenho conhecimentos em Python, C#, Unity, SolidWorks e estou me especializando em desenvolvimento web. Busco projetos práticos e oportunidades de crescimento profissional.</p>
+            <ul class="skills">
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>UI/UX básico</li>
+            </ul>
+        </section>
+
+        <section id="projetos" class="projetos container">
+            <h2>Projetos</h2>
+            <div class="grid">
+                <!-- Projetos exemplo; substitua pelos seus projetos reais -->
+                <article class="card project">
+                    <img src="img/project-placeholder.png" alt="Projeto 1">
+                    <h3>Projeto 1 — App Web</h3>
+                    <p>Descrição curta do projeto. Tecnologias: HTML, CSS, JS.</p>
+                    <a class="btn" href="#" aria-label="Ver projeto 1">Ver projeto</a>
+                </article>
+                <article class="card project">
+                    <img src="img/project-placeholder.png" alt="Projeto 2">
+                    <h3>Projeto 2 — Jogo / Simulação</h3>
+                    <p>Descrição curta. Tecnologias: Unity, C#.</p>
+                    <a class="btn" href="#" aria-label="Ver projeto 2">Ver projeto</a>
+                </article>
+                <article class="card project">
+                    <img src="img/project-placeholder.png" alt="Projeto 3">
+                    <h3>Projeto 3 — Automação</h3>
+                    <p>Descrição curta. Tecnologias: Python, SolidWorks.</p>
+                    <a class="btn" href="#" aria-label="Ver projeto 3">Ver projeto</a>
+                </article>
             </div>
-        </main>
+        </section>
+
+        <section id="contato" class="contato container">
+            <h2>Contato</h2>
+            <p>Fique à vontade para me enviar uma mensagem — respondo o mais breve possível.</p>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Nome</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn primary" type="submit">Enviar mensagem</button>
+                </div>
+                <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
+
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/cleomar-silva-173069246/" target="_blank" rel="noopener noreferrer" class="btn outline">LinkedIn</a>
+                <a href="tel:+5554991887441" class="btn outline">Telefone</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> NexusCleo<span class="dot">.</span></p>
         </div>
-    </body>
+    </footer>
+</body>
 </html>
