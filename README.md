@@ -4,9 +4,6 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi criado par
 
 **[➡️ Acesse a versão ao vivo aqui](https://nexuscleo-commits.github.io/Portfolio/)**
 
-![Screenshot do Portfólio](https://via.placeholder.com/800x450.png?text=Screenshot+do+seu+Portfólio)
-*(Sugestão: substitua a imagem e o link acima por um screenshot real e o link do seu site publicado)*
-
 ## 🚀 Sobre o Projeto
 
 Este portfólio é uma página única (Single Page Application) que destaca minhas competências como desenvolvedor em formação. Ele contém as seguintes seções:
