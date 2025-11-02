@@ -229,6 +229,27 @@ section.container {
     font-weight: 600;
 }
 
+/* Formacao Section */
+.timeline {
+    position: relative;
+    max-width: 780px;
+}
+
+.timeline-item {
+    padding-left: 20px;
+    border-left: 2px solid var(--accent);
+}
+
+.timeline-item h3 {
+    font-family: var(--ff-heading);
+}
+
+.timeline-item .timeline-period {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
 /* Projetos Section */
 .projetos .grid {
     display: grid;
