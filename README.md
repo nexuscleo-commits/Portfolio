@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi criado para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor web. O site foi desenvolvido com foco em um design moderno, responsivo e uma experiência de usuário agradável.
 
-**[➡️ Acesse a versão ao vivo aqui](https://nexuscleo-commits.github.io/Portfolio/)**
+**[➡️ Acesse a versão ao vivo aqui](https://nexuscleo.github.io/portfolio/)**
 
 ## 🚀 Sobre o Projeto
 
@@ -34,6 +34,8 @@ O projeto foi construído utilizando as seguintes tecnologias web:
 Você pode visualizar o projeto facilmente em sua máquina local.
 
 1.  Clone este repositório:
-    https://github.com/nexuscleo-commits/Portfolio/archive/refs/heads/main.zip
+    https://github.com/nexuscleo/portfolio/archive/refs/heads/main.zip
 
 2.  Abra o arquivo `index.html` no seu navegador de preferência.
+
+**Desenvolvido por Cleomar da Silva, &copy;2025 NexusCleo**
